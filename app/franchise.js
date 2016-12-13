@@ -1,36 +1,38 @@
 import React from 'react';
 
-class College extends React.Component {
+class Franchise extends React.Component {
 
     constructor() {
         super();
         this.styles = {
-            schoolName: {
+            name: {
                 fontSize: '32px'
             },
             wins: {
                 fontSize: '24px'
             }
         }
-        
+
     }
 
     render() {
-        const school = this.props.school;
+        const franchise = this.props.franchise;
 
         return <div>
             <div className="row">
                 <div className="col-md-12">
-                    <p style={this.styles.wins}>Wins: {school.wins}</p>
+                    <p style={this.styles.wins}>Wins: {franchise.wins}</p>
                 </div>
             </div>
             <div className="row">
-                <div style={school.styles} className="col-md-12">
-                    <img width="100%" src={school.logo} />
+                <div style={franchise.styles} className="col-md-12">
+                    <img width="100%" src={franchise.logo} />
                 </div>
             </div>
         </div>;
     }
 }
 
-export default College;
+export default Franchise;
+
+// <p style={this.styles.wins}>Wins: {franchise.wins}</p>
